@@ -31,34 +31,44 @@ def drw(p)
                                                                               
 s
 end
-p="roses"
-g="_ _ _ _ _ _"
-i=0
-while i<6
-     m=gets.chomp
-     h=p
-     d=0
-     while h.index(m)!=nil
-          g[2*(h.index(m)+p.length-h.length)]=m
-           if (h.index(m)+1)<p.length
-               h=h[(h.index(m)+1)..(p.length-1)]
-           else
-            break
-          end
-         d+=1
-     end
-     puts g
-     if d==0
-      puts "It's not there"
+
+
+def see(h,answers)
+  i=0
+  p=0
+  c=1
+  score=0
+  while i<5
+     puts h[i]
+     p=0
+     results = select [STDIN], nil, nil, 8
+     if !results
+      puts "not answered,TIMEOUT"
      else
-        puts "Correct"
-        drw(30+(i*15))
+      m=gets.chomp
      end
+     if (m==answers[i].chomp)
+                puts "Correct"
+                score+=1
+                drw(30+(i*15))
+                p=p+1
+     else
+        puts "not correct"
+        score=score-1
+        drw(30+((p-1)*15))
+     end
+     c=0  
      i+=1
+  end
+  puts score
+  if score==5
+    puts "WATER :P"
+    puts "Thankyou"
+  else
+    puts "NO WATER:("
+    puts "GAME OVER"
+  end
 end
-
-
-if g.index("_")!=nil
-  puts "Game Oer"
-end
-
+p=IO.readlines("q.txt")
+answers=IO.readlines("a.txt")
+see(p,answers)
