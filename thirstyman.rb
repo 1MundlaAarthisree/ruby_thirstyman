@@ -18,8 +18,8 @@ def drw(p)
     i+=1
   end
   print <<s;                                   
-              LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
-                                                                              |                                   | 
+              LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL                                     |
+                                                                              |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| 
                                                                               |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
                                                                               |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
                                                                               |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
@@ -28,8 +28,6 @@ def drw(p)
                                                                               |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
                                                                               |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
                                                                               |___________________________________|
-  
-
 s
 end
 
