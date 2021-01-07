@@ -37,7 +37,7 @@ def see(h,answers)
   p=0
   c=1
   score=0
-  while i<5
+  while i<h.size
      puts h[i]
      p=0
      results = select [STDIN], nil, nil, 8
@@ -61,7 +61,7 @@ def see(h,answers)
   end
   puts score
   if score==5
-    puts "WATER :P"
+    puts "WATER __:P"
     puts "Thankyou"
   else
     puts "NO WATER:("
